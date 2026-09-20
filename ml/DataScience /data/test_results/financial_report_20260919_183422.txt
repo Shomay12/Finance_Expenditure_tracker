@@ -1,0 +1,150 @@
+======================================================================
+                    FINANCIAL INTELLIGENCE REPORT
+======================================================================
+
+REPORT OBJECTIVE
+----------------------------------------------------------------------
+Analyze transaction behavior to understand where money is being spent,
+identify unusual transactions, detect recurring commitments, and
+estimate future spending where sufficient historical data exists.
+
+USER
+----------------------------------------------------------------------
+User ID: USR_0001
+
+DATASET SUMMARY
+----------------------------------------------------------------------
+Transactions analyzed      : 8
+Analysis period            : 2026-09-19 → 2026-09-19
+Total income               : ₹85,000.00
+Total expenses             : ₹80,749.00
+Total transfers/investments: ₹15,000.00
+Net cash flow              : ₹-10,749.00
+
+======================================================================
+1. SPENDING BREAKDOWN
+======================================================================
+Category                     |         Amount |  % of Expenses
+----------------------------------------------------------------------
+Rent & Housing               | ₹    55,000.00 |          68.1%
+Shopping                     | ₹    24,000.00 |          29.7%
+Food                         | ₹       650.00 |           0.8%
+Subscriptions                | ₹       649.00 |           0.8%
+Groceries                    | ₹       450.00 |           0.6%
+----------------------------------------------------------------------
+TOTAL EXPENSES               | ₹    80,749.00 |         100.0%
+
+======================================================================
+2. INCOME ANALYSIS
+======================================================================
+Total Income: ₹85,000.00
+
+Salary                   : ₹85,000.00
+Freelance                : ₹0.00
+Business Income          : ₹0.00
+Interest                 : ₹0.00
+Other Income             : ₹0.00
+
+======================================================================
+3. ANOMALY ANALYSIS
+======================================================================
+Anomalous Transactions: 6 / 8
+Anomaly Rate          : 75.0%
+Total Anomalous Value : ₹165,099.00
+
+Date        | Merchant                 | Category         |     Amount |  Score
+----------------------------------------------------------------------
+2026-09-19  | ZEPTO QUICK COMMERCE     | Groceries        | ₹      450 |   0.70
+  Reason: Contextual pattern deviation detected (Isolation score: 0.70).
+2026-09-19  | NETFLIX INDIA MONTHLY P  | Subscriptions    | ₹      649 |   0.75
+  Reason: Amount (₹649.00) is 5.5x higher than user's normal 'Subscriptions' spending average of ₹119.00.
+2026-09-19  | TATA CONSULTANCY SERVIC  | Salary           | ₹   85,000 |   0.70
+  Reason: Amount deviates more than 3 standard deviations from user's overall spending distribution.
+2026-09-19  | TAJ PALACE 5-STAR LUXUR  | Shopping (!)     | ₹   16,500 |   0.75
+  Reason: Amount (₹16,500.00) is 11.5x higher than user's normal 'Shopping' spending average of ₹1,437.28.
+  CATEGORY UNCERTAIN: Confidence is 34.8%. Requires manual review.
+2026-09-19  | UNKNOWN MERCHANT XYZ CO  | Shopping (!)     | ₹    7,500 |   0.75
+  Reason: Amount (₹7,500.00) is 5.2x higher than user's normal 'Shopping' spending average of ₹1,437.28.
+  CATEGORY UNCERTAIN: Confidence is 22.5%. Requires manual review.
+2026-09-19  | APOLLO HOSPITALS EMERGE  | Rent & Housing (!) | ₹   55,000 |   0.70
+  Reason: Amount (₹55,000.00) exceeds previous maximum 'Rent & Housing' spend of ₹20,079.13.
+  CATEGORY UNCERTAIN: Confidence is 46.2%. Requires manual review.
+
+======================================================================
+4. RECURRING EXPENSE ANALYSIS
+======================================================================
+Recurring Expenses Detected   : 2
+Recurring Investments/Transfers: 1
+Estimated Monthly Commitments : ₹70,649.00
+
+Recurring Consumption Expenses:
+  • NETFLIX INDIA MONTHLY PLAN     : ₹  649.00/month (Subscriptions)
+  • APOLLO HOSPITALS EMERGENCY CARE : ₹55,000.00/month (Rent & Housing)
+
+Recurring Transfers & Investments (Separated from Consumption):
+  • GROWW MUTUAL FUND SIP AUTO     : ₹15,000.00/month (Investment)
+
+======================================================================
+5. SPENDING FORECAST
+======================================================================
+Status: Insufficient data for reliable forecast.
+
+Reason:
+Spending forecasting requires longitudinal/month-to-date transaction
+data rather than isolated transactions.
+
+======================================================================
+6. FINANCIAL BEHAVIOR SIGNALS
+======================================================================
+Average Transaction Value      : ₹22,593.62
+Weekend Spending Ratio         : 100.0% of expense value occurred on weekends
+Recurring Expense Ratio        : 68.9% of expenses are committed recurring
+Subscription Ratio             : 0.8% of expenses dedicated to digital subscriptions
+Savings / Investment Ratio     : 17.6% of income allocated to transfers/investments
+
+======================================================================
+7. USER SEGMENTATION
+======================================================================
+Status: Segmentation unavailable for this isolated test input.
+Reason: User-level segmentation requires multi-month aggregated user feature vectors.
+
+======================================================================
+8. TRACKING DIFFICULTY SIGNALS
+======================================================================
+Measurable transaction complexity indicators (Addressing tracking friction):
+  • Active Payment Channels      : 5 (Auto Debit, Credit Card, Direct Deposit, UPI, UPI AutoPay)
+  • Transaction Volume           : 8 transactions
+  • Recurring Commitments        : 3 active streams
+  • Flagged Anomalous Spikes     : 6
+  • Low-Confidence / Ambiguous   : 3
+
+Note: These transaction characteristics increase the volume and dispersion of
+information a user must reconcile manually.
+
+======================================================================
+9. KEY OBSERVATIONS
+======================================================================
+1. 'Rent & Housing' represents the largest spending category (₹55,000.00, 68.1% of expenses).
+2. 6 transaction(s) were flagged as unusual relative to historical category baselines.
+3. 3 recurring commitment pattern(s) were detected totaling ₹70,649.00/mo.
+4. 3 transaction(s) had classification confidence below 60% and require user review.
+5. Spending forecasting could not be calculated because isolated test transactions lack longitudinal temporal context.
+
+======================================================================
+10. DATA QUALITY / MODEL WARNINGS
+======================================================================
+[WARNING] 3 transaction(s) have classification confidence < 60%. Review required.
+[WARNING] Some anomaly classifications depend on uncertain category predictions.
+[WARNING] Forecast cannot be reliably calculated from isolated test transactions.
+[INFO] Current test dataset is synthetic/manual and does not establish real-world generalization.
+
+======================================================================
+11. FINAL FINANCIAL INTELLIGENCE SUMMARY
+======================================================================
+The analyzed transactions record a total income of ₹85,000.00 and expenses of ₹80,749.00.
+The primary expenditure driver is 'Rent & Housing' (₹55,000.00).
+6 contextual outlier(s) were identified (Total: ₹165,099.00) that deviate from user habit.
+Regular recurring commitments total ₹70,649.00/month across 3 stream(s).
+3 ambiguous transaction(s) require manual user verification.
+Longitudinal multi-month history is required to produce statistically calibrated spending forecasts.
+======================================================================

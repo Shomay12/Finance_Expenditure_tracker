@@ -1,0 +1,68 @@
+{
+    "model_name": "SpendingForecaster_RandomForestRegressor",
+    "version": "1.0.0",
+    "training_dataset": "raw_historical_transactions.csv",
+    "category_mapping_version": "v1.0",
+    "preprocessing_version": "v1.0_daily_rolling_temporal",
+    "chronological_split": {
+        "train_months": [
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05"
+        ],
+        "val_months": [
+            "2025-06"
+        ],
+        "test_months": [
+            "2025-07",
+            "2025-08"
+        ]
+    },
+    "training_date": "2026-09-19T18:47:10.564602",
+    "n_train_samples": 5440,
+    "feature_list": [
+        "month_to_date_spending",
+        "days_elapsed",
+        "days_remaining",
+        "average_daily_spending_mtd",
+        "rolling_7_day_spending",
+        "rolling_30_day_spending",
+        "spending_velocity",
+        "previous_month_spending",
+        "monthly_recurring_committed"
+    ],
+    "benchmarks": {
+        "Baseline_MTD_Extrapolation": {
+            "mae": 39832.14527243076,
+            "rmse": 60492.56149821571,
+            "mape": 135.45136921702027
+        },
+        "Baseline_30d_MovingAvg": {
+            "mae": 18254.585213888888,
+            "rmse": 24640.9346660081,
+            "mape": 74.53582845496919
+        },
+        "RidgeRegression": {
+            "mae": 10077.762717097741,
+            "rmse": 15809.277395012945,
+            "mape": 126.69308762092682
+        },
+        "RandomForestRegressor": {
+            "mae": 7135.623843432072,
+            "rmse": 13113.78065433488,
+            "mape": 33.763245468923564
+        },
+        "XGBoostRegressor": {
+            "mae": 8138.798963435984,
+            "rmse": 14304.39884121966,
+            "mape": 52.250790790270266
+        }
+    },
+    "evaluation_metrics": {
+        "test_mae": 8632.692627884706,
+        "test_rmse": 13619.358519228961,
+        "test_mape": 58.83864423362224
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "model_name": "TransactionClassifier_logistic_regression",
+    "version": "1.0.0",
+    "training_dataset": "raw_transactions_classification.csv",
+    "taxonomy_version": "standardized_v1",
+    "category_mapping_version": "v1.0",
+    "preprocessing_version": "v1.0_tfidf_normalized",
+    "training_date": "2026-09-19T18:46:57.813775",
+    "n_train_samples": 4200,
+    "n_classes": 28,
+    "classes": [
+        "EXPENSE::Bills & Utilities",
+        "EXPENSE::Education",
+        "EXPENSE::Entertainment",
+        "EXPENSE::Fees & Charges",
+        "EXPENSE::Food",
+        "EXPENSE::Fuel",
+        "EXPENSE::Gifts & Donations",
+        "EXPENSE::Groceries",
+        "EXPENSE::Healthcare",
+        "EXPENSE::Insurance",
+        "EXPENSE::Other Expense",
+        "EXPENSE::Personal Care",
+        "EXPENSE::Rent & Housing",
+        "EXPENSE::Shopping",
+        "EXPENSE::Subscriptions",
+        "EXPENSE::Transport",
+        "EXPENSE::Travel",
+        "INCOME::Business Income",
+        "INCOME::Freelance",
+        "INCOME::Interest",
+        "INCOME::Other Income",
+        "INCOME::Salary",
+        "TRANSFER::Bank Transfer",
+        "TRANSFER::Cash Withdrawal",
+        "TRANSFER::Credit Card Payment",
+        "TRANSFER::Investment",
+        "TRANSFER::Other Transfer",
+        "TRANSFER::Savings"
+    ],
+    "feature_list": [
+        "text_features (merchant_clean + desc_clean)",
+        "payment_method",
+        "transaction_type",
+        "amount",
+        "log_amount"
+    ],
+    "model_benchmarking": {
+        "logistic_regression": {
+            "val_accuracy": 1.0,
+            "val_macro_f1": 1.0,
+            "val_weighted_f1": 1.0
+        },
+        "random_forest": {
+            "val_accuracy": 0.9722222222222222,
+            "val_macro_f1": 0.9499850619504852,
+            "val_weighted_f1": 0.9630478278503756
+        },
+        "xgboost": {
+            "val_accuracy": 1.0,
+            "val_macro_f1": 1.0,
+            "val_weighted_f1": 1.0
+        }
+    },
+    "test_metrics": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "confusion_matrix_shape": [
+            28,
+            28
+        ]
+    }
+}

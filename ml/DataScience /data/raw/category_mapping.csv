@@ -1,0 +1,49 @@
+source_category,our_category,our_subcategory
+Food & Dining,EXPENSE,Food
+Restaurants,EXPENSE,Food
+Fast Food,EXPENSE,Food
+Groceries & Supermarkets,EXPENSE,Groceries
+Supermarket,EXPENSE,Groceries
+Online Retail,EXPENSE,Shopping
+Clothing & Apparel,EXPENSE,Shopping
+Electronics,EXPENSE,Shopping
+Public Transit,EXPENSE,Transport
+Rideshare & Taxi,EXPENSE,Transport
+Gas & Fuel,EXPENSE,Fuel
+Electricity & Water,EXPENSE,Bills & Utilities
+Utilities,EXPENSE,Bills & Utilities
+Mobile & Internet,EXPENSE,Bills & Utilities
+House Rent,EXPENSE,Rent & Housing
+Mortgage,EXPENSE,Rent & Housing
+Pharmacy & Medical,EXPENSE,Healthcare
+Hospital & Clinic,EXPENSE,Healthcare
+Tuition & Courses,EXPENSE,Education
+Books & Learning,EXPENSE,Education
+Movies & Theater,EXPENSE,Entertainment
+Gaming,EXPENSE,Entertainment
+Flights & Airlines,EXPENSE,Travel
+Hotels & Lodging,EXPENSE,Travel
+Streaming Services,EXPENSE,Subscriptions
+Software Subscriptions,EXPENSE,Subscriptions
+Health & Life Insurance,EXPENSE,Insurance
+Salon & Spa,EXPENSE,Personal Care
+Charity & NGO,EXPENSE,Gifts & Donations
+Bank Fees & Penalties,EXPENSE,Fees & Charges
+Miscellaneous Expense,EXPENSE,Other Expense
+Payroll & Salary,INCOME,Salary
+Direct Deposit Payroll,INCOME,Salary
+Client Invoicing,INCOME,Freelance
+Consulting & Contract,INCOME,Freelance
+Merchant Sales Revenue,INCOME,Business Income
+Bank Deposit Interest,INCOME,Interest
+Dividend Payout,INCOME,Interest
+Cashback & Rewards,INCOME,Other Income
+Tax Refund,INCOME,Other Income
+Inter-Bank Wire Transfer,TRANSFER,Bank Transfer
+Peer-to-Peer Transfer,TRANSFER,Bank Transfer
+Credit Card Bill Pay,TRANSFER,Credit Card Payment
+Mutual Fund Purchase,TRANSFER,Investment
+Stock Brokerage Deposit,TRANSFER,Investment
+Fixed Deposit Savings,TRANSFER,Savings
+ATM Cash Withdrawal,TRANSFER,Cash Withdrawal
+Internal Account Transfer,TRANSFER,Other Transfer

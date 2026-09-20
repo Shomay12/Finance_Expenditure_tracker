@@ -1,0 +1,36 @@
+{
+    "model_name": "ContextualAnomalyDetector_IsolationForest",
+    "version": "1.0.0",
+    "training_dataset": "historical_train.csv",
+    "category_mapping_version": "v1.0",
+    "preprocessing_version": "v1.0_historical_contextual",
+    "contamination_rate": 0.015,
+    "training_date": "2026-09-19T18:46:58.628455",
+    "n_train_samples": 13285,
+    "feature_list": [
+        "log_amount",
+        "amount_to_user_mean_ratio",
+        "amount_to_category_mean_ratio",
+        "category_amount_zscore",
+        "user_amount_percentile",
+        "merchant_seen_frequency",
+        "category_spending_share",
+        "is_weekend",
+        "hour"
+    ],
+    "evaluation_metrics": {
+        "IsolationForest": {
+            "val_anomalies_detected": 57,
+            "val_anomaly_percentage": 2.2127329192546585
+        },
+        "OneClassSVM": {
+            "val_anomalies_detected": 68,
+            "val_anomaly_percentage": 2.639751552795031
+        },
+        "LocalOutlierFactor": {
+            "val_anomalies_detected": 64,
+            "val_anomaly_percentage": 2.484472049689441
+        }
+    },
+    "user_baselines_count": 40
+}

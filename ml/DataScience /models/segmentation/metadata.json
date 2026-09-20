@@ -1,0 +1,117 @@
+{
+    "model_name": "UserSegmenter_KMeans",
+    "version": "1.0.0",
+    "training_dataset": "raw_historical_transactions.csv",
+    "category_mapping_version": "v1.0",
+    "preprocessing_version": "v1.0_user_vector_aggregation",
+    "optimal_k": 2,
+    "training_date": "2026-09-19T18:47:10.987142",
+    "n_users_clustered": 40,
+    "feature_list": [
+        "monthly_income",
+        "monthly_expense",
+        "savings_ratio",
+        "transaction_count",
+        "average_transaction",
+        "food_ratio",
+        "shopping_ratio",
+        "transport_ratio",
+        "subscription_ratio",
+        "recurring_expense_ratio",
+        "spending_variability",
+        "weekend_spending_ratio",
+        "merchant_count",
+        "category_count",
+        "category_entropy"
+    ],
+    "pca_explained_variance_ratio": [
+        0.421423449595845,
+        0.18389108491839276,
+        0.09468008959469291
+    ],
+    "evaluation_metrics": {
+        "silhouette_score": 0.23687019766546974,
+        "davies_bouldin_index": 1.4471904712694124
+    },
+    "hyperparameter_sweep": {
+        "k_2": {
+            "k": 2,
+            "silhouette_score": 0.23687019766546974,
+            "davies_bouldin_index": 1.4471904712694124
+        },
+        "k_3": {
+            "k": 3,
+            "silhouette_score": 0.1916287881938858,
+            "davies_bouldin_index": 1.5432718474476026
+        },
+        "k_4": {
+            "k": 4,
+            "silhouette_score": 0.19245745129662303,
+            "davies_bouldin_index": 1.51494345442138
+        },
+        "k_5": {
+            "k": 5,
+            "silhouette_score": 0.14499547765198145,
+            "davies_bouldin_index": 1.6210418983596528
+        },
+        "k_6": {
+            "k": 6,
+            "silhouette_score": 0.15453425348396158,
+            "davies_bouldin_index": 1.461176036687607
+        }
+    },
+    "cluster_personas": {
+        "0": {
+            "persona_name": "Discretionary Weekend & Lifestyle Spender",
+            "description": "Characterized by concentrated weekend spending and higher discretionary dining/retail expense ratios.",
+            "weekend_ratio": 0.385,
+            "recurring_ratio": 0.314,
+            "savings_ratio": 0.027,
+            "subscription_ratio": 0.007,
+            "category_entropy": 2.353,
+            "centroid_values": {
+                "monthly_income": 57095.456,
+                "monthly_expense": 69017.732,
+                "savings_ratio": 0.027,
+                "transaction_count": 65.768,
+                "average_transaction": 1080.627,
+                "food_ratio": 0.265,
+                "shopping_ratio": 0.144,
+                "transport_ratio": 0.048,
+                "subscription_ratio": 0.007,
+                "recurring_expense_ratio": 0.314,
+                "spending_variability": 1.844,
+                "weekend_spending_ratio": 0.385,
+                "merchant_count": 25.857,
+                "category_count": 9.714,
+                "category_entropy": 2.353
+            }
+        },
+        "1": {
+            "persona_name": "High-Savings Structured Planner",
+            "description": "Characterized by above-average savings allocations and high structured recurring commitments.",
+            "weekend_ratio": 0.316,
+            "recurring_ratio": 0.473,
+            "savings_ratio": 0.215,
+            "subscription_ratio": 0.003,
+            "category_entropy": 2.152,
+            "centroid_values": {
+                "monthly_income": 116065.573,
+                "monthly_expense": 92935.42,
+                "savings_ratio": 0.215,
+                "transaction_count": 66.514,
+                "average_transaction": 1437.933,
+                "food_ratio": 0.169,
+                "shopping_ratio": 0.131,
+                "transport_ratio": 0.035,
+                "subscription_ratio": 0.003,
+                "recurring_expense_ratio": 0.473,
+                "spending_variability": 2.622,
+                "weekend_spending_ratio": 0.316,
+                "merchant_count": 25.885,
+                "category_count": 9.769,
+                "category_entropy": 2.152
+            }
+        }
+    }
+}

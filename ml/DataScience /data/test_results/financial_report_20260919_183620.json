@@ -1,0 +1,202 @@
+{
+  "report_metadata": {
+    "user_id": "USR_0001",
+    "generated_at": "2026-09-19T18:36:20.262372",
+    "transactions_analyzed": 8,
+    "analysis_period": {
+      "start": "2026-09-19",
+      "end": "2026-09-19"
+    }
+  },
+  "cash_flow": {
+    "total_income": 85000.0,
+    "total_expenses": 80749.0,
+    "total_transfers": 15000.0,
+    "net_cash_flow": -10749.0
+  },
+  "spending_breakdown": [
+    {
+      "category": "Rent & Housing",
+      "amount": 55000.0,
+      "percentage": 68.1
+    },
+    {
+      "category": "Shopping",
+      "amount": 24000.0,
+      "percentage": 29.7
+    },
+    {
+      "category": "Food",
+      "amount": 650.0,
+      "percentage": 0.8
+    },
+    {
+      "category": "Subscriptions",
+      "amount": 649.0,
+      "percentage": 0.8
+    },
+    {
+      "category": "Groceries",
+      "amount": 450.0,
+      "percentage": 0.6
+    }
+  ],
+  "income_breakdown": [
+    {
+      "source": "Salary",
+      "amount": 85000.0
+    }
+  ],
+  "anomalies": [
+    {
+      "date": "2026-09-19",
+      "merchant": "ZEPTO QUICK COMMERCE",
+      "category": "Groceries",
+      "amount": 450.0,
+      "score": 0.7,
+      "reason": "Contextual pattern deviation detected (Isolation score: 0.70).",
+      "confidence": 0.7512,
+      "low_confidence": false
+    },
+    {
+      "date": "2026-09-19",
+      "merchant": "NETFLIX INDIA MONTHLY PLAN",
+      "category": "Subscriptions",
+      "amount": 649.0,
+      "score": 0.75,
+      "reason": "Amount (\u20b9649.00) is 5.5x higher than user's normal 'Subscriptions' spending average of \u20b9119.00.",
+      "confidence": 0.9859,
+      "low_confidence": false
+    },
+    {
+      "date": "2026-09-19",
+      "merchant": "TATA CONSULTANCY SERVICES SALARY",
+      "category": "Salary",
+      "amount": 85000.0,
+      "score": 0.7,
+      "reason": "Amount deviates more than 3 standard deviations from user's overall spending distribution.",
+      "confidence": 0.9922,
+      "low_confidence": false
+    },
+    {
+      "date": "2026-09-19",
+      "merchant": "TAJ PALACE 5-STAR LUXURY BANQUET",
+      "category": "Shopping",
+      "amount": 16500.0,
+      "score": 0.75,
+      "reason": "Amount (\u20b916,500.00) is 11.5x higher than user's normal 'Shopping' spending average of \u20b91,437.28.",
+      "confidence": 0.3479,
+      "low_confidence": true
+    },
+    {
+      "date": "2026-09-19",
+      "merchant": "UNKNOWN MERCHANT XYZ CORP 9812",
+      "category": "Shopping",
+      "amount": 7500.0,
+      "score": 0.75,
+      "reason": "Amount (\u20b97,500.00) is 5.2x higher than user's normal 'Shopping' spending average of \u20b91,437.28.",
+      "confidence": 0.2248,
+      "low_confidence": true
+    },
+    {
+      "date": "2026-09-19",
+      "merchant": "APOLLO HOSPITALS EMERGENCY CARE",
+      "category": "Rent & Housing",
+      "amount": 55000.0,
+      "score": 0.7,
+      "reason": "Amount (\u20b955,000.00) exceeds previous maximum 'Rent & Housing' spend of \u20b920,079.13.",
+      "confidence": 0.4615,
+      "low_confidence": true
+    }
+  ],
+  "recurring_commitments": {
+    "recurring_expenses": [
+      {
+        "merchant": "NETFLIX INDIA MONTHLY PLAN",
+        "amount": 649.0,
+        "category": "Subscriptions",
+        "frequency": "Monthly"
+      },
+      {
+        "merchant": "APOLLO HOSPITALS EMERGENCY CARE",
+        "amount": 55000.0,
+        "category": "Rent & Housing",
+        "frequency": "Monthly"
+      }
+    ],
+    "recurring_investments": [
+      {
+        "merchant": "GROWW MUTUAL FUND SIP AUTO",
+        "amount": 15000.0,
+        "category": "Investment",
+        "frequency": "Monthly"
+      }
+    ],
+    "total_recurring_monthly": 70649.0
+  },
+  "forecast": {
+    "status": "insufficient_data",
+    "reason": "Isolated test transactions lack longitudinal temporal context.",
+    "current_spending": null,
+    "predicted_remaining": null,
+    "predicted_month_end": null
+  },
+  "behavior_signals": {
+    "transaction_count": 8,
+    "average_transaction": 22593.62,
+    "weekend_spending_ratio": 1.0,
+    "recurring_expense_ratio": 0.689,
+    "subscription_ratio": 0.008,
+    "savings_investment_ratio": 0.176
+  },
+  "user_segmentation": {
+    "status": "unavailable_for_isolated_input"
+  },
+  "tracking_difficulty_signals": {
+    "payment_methods_count": 5,
+    "payment_methods_active": [
+      "Auto Debit",
+      "Credit Card",
+      "Direct Deposit",
+      "UPI",
+      "UPI AutoPay"
+    ],
+    "transaction_count": 8,
+    "recurring_streams_count": 3,
+    "anomalies_count": 6,
+    "low_confidence_count": 3
+  },
+  "classification_warnings": [
+    {
+      "merchant": "TAJ PALACE 5-STAR LUXURY BANQUET",
+      "predicted_category": "EXPENSE::Shopping",
+      "confidence": 0.3479,
+      "amount": 16500.0
+    },
+    {
+      "merchant": "UNKNOWN MERCHANT XYZ CORP 9812",
+      "predicted_category": "EXPENSE::Shopping",
+      "confidence": 0.2248,
+      "amount": 7500.0
+    },
+    {
+      "merchant": "APOLLO HOSPITALS EMERGENCY CARE",
+      "predicted_category": "EXPENSE::Rent & Housing",
+      "confidence": 0.4615,
+      "amount": 55000.0
+    }
+  ],
+  "observations": [
+    "1. 'Rent & Housing' represents the largest spending category (\u20b955,000.00, 68.1% of expenses).",
+    "2. 6 transaction(s) were flagged as unusual relative to historical category baselines.",
+    "3. 3 recurring commitment pattern(s) were detected totaling \u20b970,649.00/mo.",
+    "4. 3 transaction(s) had classification confidence below 60% and require user review.",
+    "5. Spending forecasting could not be calculated because isolated test transactions lack longitudinal temporal context."
+  ],
+  "data_quality_warnings": [
+    "[WARNING] 3 transaction(s) have classification confidence < 60%. Review required.",
+    "[WARNING] Some anomaly classifications depend on uncertain category predictions.",
+    "[WARNING] Forecast cannot be reliably calculated from isolated test transactions.",
+    "[INFO] Current test dataset is synthetic/manual and does not establish real-world generalization."
+  ]
+}
